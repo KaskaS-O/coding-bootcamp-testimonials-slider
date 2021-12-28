@@ -1,0 +1,26 @@
+.slider {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  z-index: 2;
+  width: 76px;
+  height: 38px;
+  border-radius: 19px;
+  background-color: #fff;
+
+  &__arrow {
+    position: relative;
+    height: 100%;
+    width: 50%;
+  }
+
+  &__icon {
+    position: absolute;
+    height: 1.3rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

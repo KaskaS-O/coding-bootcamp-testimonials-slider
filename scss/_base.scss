@@ -1,0 +1,16 @@
+@import "variables";
+// - Font size: 32px
+
+html {
+  font-size: 10px;
+}
+
+body {
+  height: 100vh;
+  overflow: hidden;
+  font-family: "Inter", sans-serif;
+  background-image: url(../images/pattern-curve.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}

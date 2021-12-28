@@ -1,0 +1,52 @@
+@import "reset";
+@import "variables";
+@import "base";
+@import "slider";
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr;
+
+  height: 90vh;
+  margin: 8vw 8vw;
+  background-image: url(../images/pattern-bg.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.photo {
+  position: relative;
+  text-align: center;
+
+  &__img {
+    width: 260px;
+    height: 260px;
+  }
+}
+
+.testimonial {
+  background-image: url(../images/pattern-quotes.svg);
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+.footer {
+  position: absolute;
+  bottom: 1%;
+  left: 0;
+  width: 100%;
+}
+
+.attribution {
+  text-align: center;
+
+  a {
+    color: hsl(228, 45%, 44%);
+  }
+}
+
+.hidden {
+  display: none;
+}
