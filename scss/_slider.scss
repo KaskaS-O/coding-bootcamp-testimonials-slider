@@ -9,18 +9,25 @@
   height: 38px;
   border-radius: 19px;
   background-color: #fff;
+  box-shadow: 0 5px 25px -5px $grayish-blue;
 
   &__arrow {
-    position: relative;
     height: 100%;
     width: 50%;
   }
 
-  &__icon {
-    position: absolute;
-    height: 1.3rem;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  #arrow-left,
+  #arrow-right {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto 1.3rem;
+  }
+
+  #arrow-left {
+    background-image: url(../images/icon-prev.svg);
+  }
+
+  #arrow-right {
+    background-image: url(../images/icon-next.svg);
   }
 }
