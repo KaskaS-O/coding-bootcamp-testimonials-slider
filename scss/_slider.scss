@@ -11,6 +11,24 @@
   background-color: #fff;
   box-shadow: 0 5px 25px -5px $grayish-blue;
 
+  @media (min-width: $mobile-md) {
+    transform: translate(-180%, 50%);
+    width: 90px;
+    height: 46px;
+    border-radius: 23px;
+    box-shadow: -5px 30px 25px -15px $grayish-blue;
+  }
+
+  @media (min-width: $mobile-lg) and (orientation: landscape) {
+    box-shadow: 0 15px 35px -15px $grayish-blue;
+  }
+
+  @media (min-width: $desktop-sm) {
+    width: 116px;
+    height: 56px;
+    border-radius: 28px;
+  }
+
   &__arrow {
     height: 100%;
     width: 50%;
@@ -21,6 +39,10 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: auto 1.3rem;
+
+    @media (min-width: $desktop-sm) {
+      background-size: auto 1rem;
+    }
   }
 
   #arrow-left {

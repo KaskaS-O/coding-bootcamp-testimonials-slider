@@ -3,14 +3,33 @@
 
 html {
   font-size: 10px;
+
+  @media (min-width: $mobile-md) {
+    font-size: 12px;
+  }
+
+  @media (min-width: $desktop-sm) {
+    font-size: 18px;
+  }
 }
 
 body {
   height: 100vh;
+  max-width: 1440px;
+  margin: 0 auto;
   overflow: hidden;
   font-family: "Inter", sans-serif;
   background-image: url(../images/pattern-curve.svg);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: bottom;
+
+  @media (min-width: $desktop-sm) {
+    background-size: auto 200px;
+    background-position: bottom left;
+  }
+
+  @media (min-width: $desktop-lg) {
+    background-size: auto 250px;
+  }
 }

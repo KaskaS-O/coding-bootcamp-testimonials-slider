@@ -9,14 +9,41 @@ html {
   font-size: 10px;
 }
 
+@media (min-width: 768px) {
+  html {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 1200px) {
+  html {
+    font-size: 18px;
+  }
+}
+
 body {
   height: 100vh;
+  max-width: 1440px;
+  margin: 0 auto;
   overflow: hidden;
   font-family: "Inter", sans-serif;
   background-image: url(../images/pattern-curve.svg);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: bottom;
+}
+
+@media (min-width: 1200px) {
+  body {
+    background-size: auto 200px;
+    background-position: bottom left;
+  }
+}
+
+@media (min-width: 1440px) {
+  body {
+    background-size: auto 250px;
+  }
 }
 
 .slider {
@@ -37,6 +64,33 @@ body {
           box-shadow: 0 5px 25px -5px #babacf;
 }
 
+@media (min-width: 768px) {
+  .slider {
+    -webkit-transform: translate(-180%, 50%);
+            transform: translate(-180%, 50%);
+    width: 90px;
+    height: 46px;
+    border-radius: 23px;
+    -webkit-box-shadow: -5px 30px 25px -15px #babacf;
+            box-shadow: -5px 30px 25px -15px #babacf;
+  }
+}
+
+@media (min-width: 1024px) and (orientation: landscape) {
+  .slider {
+    -webkit-box-shadow: 0 15px 35px -15px #babacf;
+            box-shadow: 0 15px 35px -15px #babacf;
+  }
+}
+
+@media (min-width: 1200px) {
+  .slider {
+    width: 116px;
+    height: 56px;
+    border-radius: 28px;
+  }
+}
+
 .slider__arrow {
   height: 100%;
   width: 50%;
@@ -47,6 +101,13 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: auto 1.3rem;
+}
+
+@media (min-width: 1200px) {
+  .slider #arrow-left,
+  .slider #arrow-right {
+    background-size: auto 1rem;
+  }
 }
 
 .slider #arrow-left {
@@ -66,10 +127,49 @@ body {
       grid-template-rows: auto 1fr;
   row-gap: 60px;
   height: 90vh;
-  margin: 7vw 7vw;
+  margin: 7vw;
   background-image: url(../images/pattern-bg.svg);
   background-size: contain;
   background-repeat: no-repeat;
+}
+
+@media (max-width: 300px) {
+  .grid-container {
+    margin: 5vw;
+  }
+}
+
+@media (min-width: 768px) {
+  .grid-container {
+    row-gap: 100px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid-container {
+    margin: 15vw;
+    row-gap: 150px;
+  }
+}
+
+@media (min-width: 1024px) and (orientation: landscape) {
+  .grid-container {
+    -ms-grid-columns: 1fr auto;
+        grid-template-columns: 1fr auto;
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
+    margin: 6%;
+    height: 80%;
+    background-position: right top;
+    background-size: 65%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .grid-container {
+    margin-top: 8%;
+    background-size: auto;
+  }
 }
 
 .photo {
@@ -86,7 +186,67 @@ body {
           box-shadow: -45px 75px 35px -60px #babacf;
 }
 
+@media (min-width: 768px) {
+  .photo__img {
+    width: 500px;
+    height: 500px;
+    -webkit-box-shadow: -125px 160px 35px -130px #babacf;
+            box-shadow: -125px 160px 35px -130px #babacf;
+  }
+}
+
+@media (min-width: 1024px) and (orientation: landscape) {
+  .photo__img {
+    width: 400px;
+    height: 400px;
+    -webkit-box-shadow: -100px 140px 35px -120px #babacf;
+            box-shadow: -100px 140px 35px -120px #babacf;
+  }
+}
+
+@media (min-width: 1200px) {
+  .photo__img {
+    width: 500px;
+    height: 500px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .photo__img {
+    width: 550px;
+    height: 550px;
+    -webkit-box-shadow: -110px 150px 35px -130px #babacf;
+            box-shadow: -110px 150px 35px -130px #babacf;
+  }
+}
+
+@media (min-width: 1024px) and (orientation: landscape) {
+  .photo {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-area: 1/2/2/3;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    margin-top: 0;
+    margin-right: 60px;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+}
+
+@media (min-width: 1200px) {
+  .photo {
+    margin-right: 90px;
+    margin-top: -50px;
+  }
+}
+
 .testimonial {
+  position: relative;
   background-image: url(../images/pattern-quotes.svg);
   background-size: 60px;
   background-repeat: no-repeat;
@@ -102,14 +262,82 @@ body {
   font-weight: 300;
 }
 
+@media (min-width: 768px) {
+  .testimonial__txt {
+    margin: 25px 80px;
+  }
+}
+
+@media (min-width: 1024px) and (orientation: landscape) {
+  .testimonial__txt {
+    position: absolute;
+    top: 50px;
+    width: 110%;
+    margin: 0;
+    line-height: 1.5;
+  }
+}
+
+@media (min-width: 1200px) {
+  .testimonial__txt {
+    top: 60px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .testimonial__txt {
+    width: 115%;
+  }
+}
+
+@media (min-width: 1024px) and (orientation: landscape) {
+  .testimonial {
+    -ms-flex-item-align: center;
+        align-self: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    height: 270px;
+    margin-left: 15%;
+    background-size: 100px;
+    background-position-x: 25%;
+    text-align: left;
+  }
+}
+
+@media (min-width: 1200px) {
+  .testimonial {
+    height: 370px;
+    margin-left: 10%;
+    background-size: auto;
+  }
+}
+
 .author {
   margin-top: 20px;
   font-size: 1.4rem;
   line-height: 1.4;
 }
 
+@media (min-width: 1200px) {
+  .author {
+    font-size: 1.25rem;
+  }
+}
+
 .author__name, .author__profession {
   display: block;
+}
+
+@media (min-width: 1024px) and (orientation: landscape) {
+  .author__name, .author__profession {
+    display: inline-block;
+  }
 }
 
 .author__name {
@@ -129,10 +357,17 @@ body {
 
 .attribution {
   text-align: center;
+  font-size: 1rem;
+}
+
+@media (min-width: 1200px) {
+  .attribution {
+    font-size: 0.9rem;
+  }
 }
 
 .attribution a {
-  color: #3e52a3;
+  color: #202046;
 }
 
 .hidden {

@@ -10,10 +10,37 @@
   row-gap: 60px;
 
   height: 90vh;
-  margin: 7vw 7vw;
+  margin: 7vw;
   background-image: url(../images/pattern-bg.svg);
   background-size: contain;
   background-repeat: no-repeat;
+
+  @media (max-width: $mobile-xs) {
+    margin: 5vw;
+  }
+
+  @media (min-width: $mobile-md) {
+    row-gap: 100px;
+  }
+
+  @media (min-width: $mobile-lg) {
+    margin: 15vw;
+    row-gap: 150px;
+  }
+
+  @media (min-width: $mobile-lg) and (orientation: landscape) {
+    grid-template-columns: 1fr auto;
+    grid-template-rows: 1fr;
+    margin: 6%;
+    height: 80%;
+    background-position: right top;
+    background-size: 65%;
+  }
+
+  @media (min-width: $desktop-sm) {
+    margin-top: 8%;
+    background-size: auto;
+  }
 }
 
 .photo {
@@ -26,10 +53,46 @@
     height: 250px;
     border-radius: 6px;
     box-shadow: -45px 75px 35px -60px $grayish-blue;
+
+    @media (min-width: $mobile-md) {
+      width: 500px;
+      height: 500px;
+      box-shadow: -125px 160px 35px -130px $grayish-blue;
+    }
+    @media (min-width: $mobile-lg) and (orientation: landscape) {
+      width: 400px;
+      height: 400px;
+      box-shadow: -100px 140px 35px -120px $grayish-blue;
+    }
+
+    @media (min-width: $desktop-sm) {
+      width: 500px;
+      height: 500px;
+    }
+
+    @media (min-width: $desktop-sm) {
+      width: 550px;
+      height: 550px;
+      box-shadow: -110px 150px 35px -130px $grayish-blue;
+    }
+  }
+
+  @media (min-width: $mobile-lg) and (orientation: landscape) {
+    grid-area: 1/2/2/3;
+    align-self: center;
+    margin-top: 0;
+    margin-right: 60px;
+    height: fit-content;
+  }
+
+  @media (min-width: $desktop-sm) {
+    margin-right: 90px;
+    margin-top: -50px;
   }
 }
 
 .testimonial {
+  position: relative;
   background-image: url(../images/pattern-quotes.svg);
   background-size: 60px;
   background-repeat: no-repeat;
@@ -42,6 +105,44 @@
     font-size: 1.8rem;
     line-height: 1.3;
     font-weight: 300;
+
+    @media (min-width: $mobile-md) {
+      margin: 25px 80px;
+    }
+
+    @media (min-width: $mobile-lg) and (orientation: landscape) {
+      position: absolute;
+      top: 50px;
+      width: 110%;
+      margin: 0;
+      line-height: 1.5;
+    }
+
+    @media (min-width: $desktop-sm) {
+      top: 60px;
+    }
+
+    @media (min-width: $desktop-lg) {
+      width: 115%;
+    }
+  }
+
+  @media (min-width: $mobile-lg) and (orientation: landscape) {
+    align-self: center;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    height: 270px;
+    margin-left: 15%;
+    background-size: 100px;
+    background-position-x: 25%;
+    text-align: left;
+  }
+
+  @media (min-width: $desktop-sm) {
+    height: 370px;
+    margin-left: 10%;
+    background-size: auto;
   }
 }
 
@@ -50,9 +151,17 @@
   font-size: 1.4rem;
   line-height: 1.4;
 
+  @media (min-width: $desktop-sm) {
+    font-size: 1.25rem;
+  }
+
   &__name,
   &__profession {
     display: block;
+
+    @media (min-width: $mobile-lg) and (orientation: landscape) {
+      display: inline-block;
+    }
   }
 
   &__name {
@@ -73,9 +182,14 @@
 
 .attribution {
   text-align: center;
+  font-size: 1rem;
+
+  @media (min-width: $desktop-sm) {
+    font-size: 0.9rem;
+  }
 
   a {
-    color: hsl(228, 45%, 44%);
+    color: $dark-blue;
   }
 }
 
