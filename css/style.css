@@ -21,7 +21,7 @@ html {
   }
 }
 
-body {
+main {
   height: 100vh;
   max-width: 1440px;
   margin: 0 auto;
@@ -34,16 +34,29 @@ body {
 }
 
 @media (min-width: 1200px) {
-  body {
+  main {
     background-size: auto 200px;
     background-position: bottom left;
   }
 }
 
 @media (min-width: 1440px) {
-  body {
+  main {
     background-size: auto 250px;
   }
+}
+
+h1 {
+  font-size: 0;
+  width: 1px;
+  height: 1px;
+  display: inline-block;
+  overflow: hidden;
+  position: absolute;
+  border: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px);
 }
 
 .slider {
